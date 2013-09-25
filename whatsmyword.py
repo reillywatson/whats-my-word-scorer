@@ -5,7 +5,7 @@ totalScore = 0
 word = getpass.getpass('Enter your word, or enter nothing to take a random word')
 if word == '':
 	words = open('/usr/share/dict/words').read().split('\n')
-	words = [a for a in words if len(a) == 6]
+	words = [a for a in words if len(a) == 6 or len(a) == 7]
 	word = random.sample(words,1)[0]
 ranges = [(0,3), (0,4), (1,5), (2,6), (3,7), (2,7), (1,6), (0,5), (0,6), (1,7), (0,7)]
 if len(word) == 6:
